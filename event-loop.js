@@ -4,19 +4,19 @@ let count = 0;
 //--------------PART_A--------------------
 //what will be the behaviour of the while loop
 
-setTimeout(() => {
-	a = false;
-}, 2000);
+// setTimeout(() => {
+// 	a = false;
+// }, 2000);
 
-setInterval(() => {
-	if (a) {
-		console.log(count++);
-	}
-}, 200);
+// setInterval(() => {
+// 	if (a) {
+// 		console.log(count++);
+// 	}
+// }, 200);
 
-while (a) {
-	if (a) console.log(count++);
-}
+// while (a) {
+// 	if (a) console.log(count++);
+// }
 
 //--------------PART_B--------------------
 

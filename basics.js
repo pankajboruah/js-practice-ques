@@ -1,20 +1,22 @@
 // this + arrow function
 // what would be the output here?
 // how to make this work?
-const user = {
-	firstName: "",
-	lastName: "",
-	setName: function (name) {
-		const splitName = function (name) {
-			this.firstName = name.split(" ")[0];
-			this.lastName = name.split(" ")[1];
-		};
-		splitName(name);
-	},
-};
+{
+	const user = {
+		firstName: "",
+		lastName: "",
+		setName: function (name) {
+			const splitName = function (name) {
+				this.firstName = name.split(" ")[0];
+				this.lastName = name.split(" ")[1];
+			};
+			splitName(name);
+		},
+	};
 
-user.setName("john doe");
-console.log(user.firstName);
+	user.setName("john doe");
+	console.log(user.firstName);
+}
 
 //closures
 // let a = () => {
@@ -71,18 +73,18 @@ Query builder:
 	(Age > 18 && (graduationMarks > 60 || entranceExam >80))
 */
 
-let user = {
-	userId: 100,
-	personalDetails: {
-		firstName: "John",
-		lastName: "Doe",
-		address: {
-			state: "Maharashtra",
-			city: "Mumbai",
-			country: "India",
-		},
-	},
-};
+// let user = {
+// 	userId: 100,
+// 	personalDetails: {
+// 		firstName: "John",
+// 		lastName: "Doe",
+// 		address: {
+// 			state: "Maharashtra",
+// 			city: "Mumbai",
+// 			country: "India",
+// 		},
+// 	},
+// };
 
 /* 
 	userId: 100,
@@ -100,14 +102,14 @@ let user = {
 // ----------------------------------------------------------------------------------------------------------
 // find bugs and resolve them
 
-useEffect(() => {
-	window.addEventListener("resize", () => {
-		setLightSaber(pos);
-	});
-	return window.removeEventListener("resize", () => {
-		setLightSaber(pos);
-	});
-}, [pos]);
+// useEffect(() => {
+// 	window.addEventListener("resize", () => {
+// 		setLightSaber(pos);
+// 	});
+// 	return window.removeEventListener("resize", () => {
+// 		setLightSaber(pos);
+// 	});
+// }, [pos]);
 
 /* 
 const foo = useCallback(() => {
@@ -122,50 +124,50 @@ useEffect(() => {
 
 // -----------------------------------------------------------------------------------------------------------
 // output
-var a = 10;
-let b = 10;
-c = 10;
-function fun() {
-	var a = 20;
-	let b = 20;
-	c = 20;
-	console.log(a, b, c);
-}
-console.log(a, b, c);
-fun();
-console.log(a, b, c);
+// var a = 10;
+// let b = 10;
+// c = 10;
+// function fun() {
+// 	var a = 20;
+// 	let b = 20;
+// 	c = 20;
+// 	console.log(a, b, c);
+// }
+// console.log(a, b, c);
+// fun();
+// console.log(a, b, c);
 
 //-------------------------------------------------------------------------------------------------------------
 
-let a;
-{
-	let b;
-}
+// let a;
+// {
+// 	let b;
+// }
 
-function a() {
-	let x = 10; //-> window.x = 10
-	function b() {
-		let x = 20;
-	}
-	console.log(x);
-}
-console.log(x);
-// x ?
+// function a() {
+// 	let x = 10; //-> window.x = 10
+// 	function b() {
+// 		let x = 20;
+// 	}
+// 	console.log(x);
+// }
+// console.log(x);
+// // x ?
 
-var x = 10;
-console.log(window.x);
+// var x = 10;
+// console.log(window.x);
 
 //-------------------------------------------------------------------------------------------------------------
 //can we make this run exactly after delay regardless of the call stack
-setTimeout(() => {
-	console.log("hello world");
-}, 1000);
+// setTimeout(() => {
+// 	console.log("hello world");
+// }, 1000);
 
 //-------------------------------------------------------------------------------------------------------------
 //implement waitFor
-waitFor(5).then(() => {
-	console.log("hello");
-});
+// waitFor(5).then(() => {
+// 	console.log("hello");
+// });
 
 // function waitFor(delay) {
 //   return new Promise((resolve)=> {
